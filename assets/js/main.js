@@ -58,12 +58,18 @@ $("#signup-submit").click((e) => {
 
   if (!payload.email) return console.log("Email is required!");
 
+  if(payload.fistname && payload.lastname && payload.email && payload.phone){
+    swal("Good job!", "we will get back to your as soon as possible", "success");
+  }else{
+    alert('please enter your first-name, last-name, email and phone number')
+  }
+
+
   console.log(payload);
 });
 
 $("#contact-submit").click((e) => {
   e.preventDefault();
-
   let payload = {};
 
   payload.fistname = $("#contact-fname").val();
@@ -75,6 +81,12 @@ $("#contact-submit").click((e) => {
   payload.msg = $("#contact-msg").val();
 
   if (!payload.email) return console.log("Email is required!");
+
+  if(payload.fistname && payload.lastname && payload.email && payload.phone){  
+    swal("Good job!", "we will get back to your as soon as possible", "success");
+  }else{
+    alert('please enter your first-name, last-name, email and phone number')
+  }
 
   console.log(payload);
 });
@@ -95,6 +107,13 @@ $("#dynamic-form-submit").click((e) => {
   payload.msg = $("#partner-msg").val();
 
   if (!payload.email) return console.log("Email is required!");
+
+  if(payload.fistname && payload.lastname && payload.email && payload.phone){  
+    swal("Good job!", "we will get back to your as soon as possible", "success");
+  }else{
+    alert('please enter your first-name, last-name, email and phone number')
+  }
+
 
   console.log(payload);
 });
